@@ -1,20 +1,28 @@
-package lab03;
+package lab09;
 
-import java.util.Arrays;
+import java.util.Scanner;
 
 public class start {
 	public static void main(String[] args) {
-		int a[] = { 12, 27, 9, 76, 2 };
-		for (int i = 0; i < a.length - 1; i++) {
-			for (int j = i + 1; j < a.length; j++) {
-				if (a[i] > a[j]) {
-					int temp = a[i];
-					a[i] = a[j];
-					a[j] = temp;
-				}
-			}
+		int x;
+		Scanner sc = new Scanner(System.in);
+//		while (true)
+//			try {
+//				System.out.print("Nhap x: ");
+//				x = sc.nextInt();
+//				System.out.print("x = " + 10 / x);
+//				break;
+//			} catch (Exception e) {
+//				sc.nextLine();
+//				System.out.println("erro: ");
+//
+//			}
+		System.out.println("Nhap tuoi: ");
+		x = sc.nextInt();
+		if (x < 18) {
+			throw new ArithmeticException("Not enought");
+		} else {
+			System.out.println("You in ");
 		}
-
-		System.out.println("Sau khi duoc sap xep: " + Arrays.toString(a));
 	}
 }
